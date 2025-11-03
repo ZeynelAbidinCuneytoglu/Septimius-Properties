@@ -1,0 +1,48 @@
+---
+// src/layouts/BaseLayout.astro
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title} | Septimius Properties</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content={`${title} | Septimius Properties`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" /> {/* Replace with your actual OG image */}
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="website" />
+    
+    <!-- View Transitions for smoother page navigation (Optional but nice) -->
+    <ViewTransitions />
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-white">
+    <Header />
+    
+    <!-- Main Content Slot -->
+    <main class="min-h-screen">
+      <slot /> {/* This is where page content will be injected */}
+    </main>
+
+    <Footer />
+  </body>
+</html>

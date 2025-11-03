@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const FORM_ACTION = 'https://formspree.io/f/your-form-id';
+
+const contactDetails = [
+  {
+    icon: "🏢",
+    title: "Address",
+    details: "Landscape House, Baldonnell Business Park, Citywest, Dublin 22"
+  },
+  {
+    icon: "📞",
+    title: "Phone",
+    details: "01-123 4567",
+    link: "tel:011234567"
+  },
+  {
+    icon: "📧",
+    title: "Email",
+    details: "info@septimiusproperties.com",
+    link: "mailto:info@septimiusproperties.com"
+  }
+];
+
+const socialLinks = [
+  { name: 'Instagram', icon: 'instagram', url: '#' },
+  { name: 'TikTok', icon: 'tiktok', url: '#' },
+  { name: 'Facebook', icon: 'facebook', url: '#' },
+  { name: 'LinkedIn', icon: 'linkedin', url: '#' }
+];
+---
+
+<BaseLayout title="Contact Us">
+  <main class="container mx-auto px-4 py-16">
+    <div class="max-w-3xl mx-auto mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-4">Get in Touch</h1>
+      <p class="text-lg text-muted-foreground">
+        Have a question or want to discuss a project? We'd love to hear from you.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8">
+      <!-- Contact Info -->
+      <div class="lg:col-span-4 space-y-6">
+        {contactDetails.map(item => (
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl">{item.icon}</span>
+              <div>
+                <h3 class="font-medium mb-1">{item.title}</h3>
+                {item.link ? (
+                  <a href={item.link} class="text-[#cfa604] hover:text-[#b89203]">
+                    {item.details}
+                  </a>
+                ) : (
+                  <p class="text-gray-600">{item.details}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <!-- Social Links -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="font-medium mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            {socialLinks.map(social => (
+              <a
+                href={social.url}
+                class="text-[#cfa604] hover:text-[#b89203] text-2xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Follow us on ${social.name}`}
+              >
+                <i class={`fab fa-${social.icon}`}></i>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-8 bg-white rounded-lg shadow-sm p-8">
+        <form id="contact-form" class="space-y-6" method="POST" action={FORM_ACTION}>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium mb-2" for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2" for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2" for="subject">Subject</label>
+            <select
+              id="subject"
+              name="subject"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
+            >
+              <option value="">Select a subject</option>
+              <option>Property Inquiry</option>
+              <option>General Question</option>
+              <option>Business Proposal</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2" for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-6 py-3 bg-[#cfa604] hover:bg-[#b89203] text-white rounded-md transition-colors"
+          >
+            Send Message
+          </button>
+          <p id="form-status" class="text-sm text-gray-600 mt-2" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Full-width Image -->
+    <div class="mt-16">
+      <img
+        src="/Images/Lakehouse Property/457f943b-2c81-4471-91fb-9f1fb2e06de3.avif"
+        alt="Septimius Properties Office"
+        class="w-full h-[600px] object-cover rounded-lg shadow-lg"
+      />
+    </div>
+  </main>
+
+  <script>
+    // Form handling script remains the same
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Sending...';
+        
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          });
+          
+          if (response.ok) {
+            status.textContent = 'Thank you for your message. We\'ll get back to you soon!';
+            form.reset();
+          } else {
+            status.textContent = 'Oops! There was a problem sending your message.';
+          }
+        } catch (error) {
+          status.textContent = 'Oops! There was a problem sending your message.';
+        }
+      });
+    }
+  </script>
+</BaseLayout>

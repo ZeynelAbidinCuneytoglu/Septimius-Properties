@@ -1,0 +1,280 @@
+---
+// projects/universal-cafe.astro - Universal Café project detail page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectImages = [
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg',
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-2.jpg',
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-3.jpg',
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-4.jpg',
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-5.jpg',
+  '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-6.jpg'
+];
+---
+
+<BaseLayout title="Universal Café – Dublin" description="Modern café design featuring contemporary furniture, custom fitout solutions, and innovative interior design in the heart of Dublin.">
+  
+  <!-- Full-Width Hero Section -->
+  <section class="relative h-[70vh] min-h-[500px] md:h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src={projectImages[0]} 
+        alt="Universal Café – Dublin" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 container mx-auto">
+      <nav class="text-sm md:text-base mb-6 opacity-90">
+        <a href="/" class="hover:text-amber-400 transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/projects" class="hover:text-amber-400 transition-colors">Projects</a>
+        <span class="mx-2">/</span>
+        <span class="text-amber-400">Universal Café</span>
+      </nav>
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold mb-4 leading-tight">Universal Café</h1>
+      <p class="text-lg md:text-xl text-white/90 mb-2">Dublin, Ireland</p>
+      <p class="text-base md:text-lg text-amber-400 font-semibold uppercase tracking-wider">Design • Fitout • Furniture</p>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Quick Stats Bar -->
+  <section class="bg-gray-900 text-white py-10 md:py-14">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="text-center">
+          <p class="text-3xl md:text-5xl font-bold text-amber-400 mb-2">2024</p>
+          <p class="text-xs md:text-sm uppercase tracking-wide text-gray-400">Year Completed</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl md:text-5xl font-bold text-amber-400 mb-2">12</p>
+          <p class="text-xs md:text-sm uppercase tracking-wide text-gray-400">Weeks</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl md:text-5xl font-bold text-amber-400 mb-2">250m²</p>
+          <p class="text-xs md:text-sm uppercase tracking-wide text-gray-400">Space</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl md:text-5xl font-bold text-amber-400 mb-2">100%</p>
+          <p class="text-xs md:text-sm uppercase tracking-wide text-gray-400">Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview Section -->
+  <section class="py-16 md:py-24 lg:py-32 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+          <p class="text-amber-500 font-bold uppercase text-xs md:text-sm tracking-wider mb-3">About This Project</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Modern Café Transformation</h2>
+          <div class="h-0.5 w-20 bg-amber-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-12">
+          <div class="space-y-5">
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+              Universal Café represents a complete transformation of a traditional Dublin café space into a modern, vibrant destination that seamlessly blends contemporary design with functional elegance.
+            </p>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Our team delivered a comprehensive design solution that encompassed interior design, custom fitout, and furniture selection. The project required careful consideration of both aesthetics and operational requirements, creating a space that is both visually stunning and highly practical for daily café operations.
+            </p>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              The design features custom-built furniture pieces, carefully selected materials that combine durability with style, and an innovative lighting scheme that enhances the café's atmosphere throughout the day.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-md">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">Project Details</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center border-b border-gray-200 pb-3">
+                <span class="text-gray-600 font-medium text-sm md:text-base">Location</span>
+                <span class="text-gray-900 font-semibold text-sm md:text-base">Dublin, Ireland</span>
+              </div>
+              <div class="flex justify-between items-center border-b border-gray-200 pb-3">
+                <span class="text-gray-600 font-medium text-sm md:text-base">Category</span>
+                <span class="text-gray-900 font-semibold text-sm md:text-base">Commercial</span>
+              </div>
+              <div class="flex justify-between items-center border-b border-gray-200 pb-3">
+                <span class="text-gray-600 font-medium text-sm md:text-base">Status</span>
+                <span class="text-amber-500 font-semibold text-sm md:text-base">Completed</span>
+              </div>
+              <div class="pt-2">
+                <p class="text-gray-600 font-medium mb-3 text-sm md:text-base">Services</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs md:text-sm font-medium">Interior Design</span>
+                  <span class="px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs md:text-sm font-medium">Custom Fitout</span>
+                  <span class="px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs md:text-sm font-medium">Furniture</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Feature Image -->
+  <section class="py-8 md:py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <img 
+        src={projectImages[1]} 
+        alt="Universal Café interior" 
+        class="w-full h-auto rounded-xl shadow-2xl"
+      />
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="py-16 md:py-24 lg:py-32 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+          <p class="text-amber-500 font-bold uppercase text-xs md:text-sm tracking-wider mb-3">Key Features</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Design Highlights</h2>
+          <div class="h-0.5 w-20 bg-amber-500 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-14 h-14 md:w-16 md:h-16 bg-amber-100 rounded-full flex items-center justify-center mb-5 md:mb-6">
+              <svg class="w-7 h-7 md:w-8 md:h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Innovative Lighting</h3>
+            <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+              Custom lighting scheme designed to enhance the café's atmosphere throughout the day, creating different moods for morning, afternoon, and evening.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-14 h-14 md:w-16 md:h-16 bg-amber-100 rounded-full flex items-center justify-center mb-5 md:mb-6">
+              <svg class="w-7 h-7 md:w-8 md:h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Custom Furniture</h3>
+            <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+              Bespoke furniture pieces designed specifically for the space, combining durability with style to create a unique brand identity.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-14 h-14 md:w-16 md:h-16 bg-amber-100 rounded-full flex items-center justify-center mb-5 md:mb-6">
+              <svg class="w-7 h-7 md:w-8 md:h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Material Selection</h3>
+            <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+              Carefully curated materials that combine durability with style, ensuring the space remains beautiful and functional for years to come.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-10 md:mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">Project Gallery</h2>
+        <p class="text-gray-600 text-sm md:text-base">A visual journey through the completed space</p>
+        <div class="h-0.5 w-20 bg-amber-500 mx-auto mt-4"></div>
+      </div>
+
+      <!-- Clean Grid Gallery -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {projectImages.slice(2).map((image, index) => (
+          <div class={`relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group ${index === 0 || index === 3 ? 'md:col-span-2' : ''}`}>
+            <div class={`${index === 0 || index === 3 ? 'aspect-[2/1]' : 'aspect-square'}`}>
+              <img 
+                src={image} 
+                alt={`Universal Café - Gallery ${index + 1}`} 
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-r from-amber-500 to-amber-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Ready to Start Your Project?</h2>
+      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Let's work together to transform your space into something extraordinary.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/contact" 
+          class="inline-block bg-white text-amber-600 font-semibold py-3 md:py-4 px-8 md:px-10 rounded-lg hover:bg-gray-100 transition-colors duration-300 uppercase tracking-wide text-sm md:text-base"
+        >
+          Get In Touch
+        </a>
+        <a 
+          href="/projects" 
+          class="inline-block border-2 border-white text-white font-semibold py-3 md:py-4 px-8 md:px-10 rounded-lg hover:bg-white hover:text-amber-600 transition-colors duration-300 uppercase tracking-wide text-sm md:text-base"
+        >
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10 md:mb-12 text-center">Related Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <a href="/projects/sheelin-lakehouse" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <div class="relative overflow-hidden aspect-video">
+              <img 
+                src="/Images/Lakehouse Property/DJI_0346.JPG" 
+                alt="Sheelin Lakehouse" 
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-5 md:p-6">
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Sheelin Lakehouse</h3>
+              <p class="text-gray-600 mb-2 text-sm md:text-base">Design, Renovate, Furniture, Rental</p>
+              <span class="text-amber-500 font-semibold text-xs md:text-sm uppercase tracking-wide">View Project →</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/projects/wicklow-holiday-home" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <div class="relative overflow-hidden aspect-video">
+              <img 
+                src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg" 
+                alt="Wicklow Holiday Home" 
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-5 md:p-6">
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Wicklow Holiday Home</h3>
+              <p class="text-gray-600 mb-2 text-sm md:text-base">Architectural Design</p>
+              <span class="text-amber-500 font-semibold text-xs md:text-sm uppercase tracking-wide">View Project →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

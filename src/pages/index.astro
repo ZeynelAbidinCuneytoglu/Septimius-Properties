@@ -1,0 +1,411 @@
+---
+// index.astro - Home page with Duplex-inspired design
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const featuredProjects = [
+  {
+    id: 'universal-cafe',
+    title: 'Universal Café – Dublin',
+    category: 'Design, Fitout, Furniture',
+    tags: ['interior', 'commercial'],
+    description: 'A modern café design featuring contemporary furniture, custom fitout solutions, and innovative interior design.',
+    image: '/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg',
+    slug: '/projects/universal-cafe'
+  },
+  {
+    id: 'sheelin-lakehouse',
+    title: 'Sheelin Lakehouse',
+    category: 'Design, Renovate, Furniture, Rental',
+    tags: ['interior', 'renovation', 'architecture'],
+    description: 'Complete renovation and design transformation of a lakeside property into a premium rental destination.',
+    image: '/Images/Lakehouse Property/DJI_0346.JPG',
+    slug: '/projects/sheelin-lakehouse'
+  },
+  {
+    id: 'wicklow-holiday-home',
+    title: 'Wicklow Holiday Home',
+    category: 'Architectural Design',
+    tags: ['architecture'],
+    description: 'Contemporary architectural design for a luxury holiday home in the scenic Wicklow mountains.',
+    image: '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg',
+    slug: '/projects/wicklow-holiday-home'
+  }
+];
+---
+
+<BaseLayout title="Home" description="Shaping Futures with Innovative Design - Septimius Properties, your trusted real estate partner in Dublin, Ireland.">
+  
+  <!-- Hero Section with Image Background -->
+  <section class="relative overflow-hidden py-20 md:py-32 min-h-[600px] flex items-center">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0">
+      <img 
+        src="/Images/Hero-Background.jpg" 
+        alt="Hero background" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-20">
+      <div class="text-center max-w-4xl mx-auto animate-fade-in">
+        <p class="text-white text-lg md:text-xl font-medium mb-4 tracking-wider">WE PROVIDE</p>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-tight">
+          BEST INTERIOR DESIGN
+        </h1>
+        <p class="text-gray-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          Shaping futures with innovative design, superior craftsmanship, and unparalleled client service.
+        </p>
+        <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-lg">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Get in Touch</span>
+          <span class="relative invisible">Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-amber-500 font-bold uppercase text-sm tracking-wider mb-4">ABOUT US</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">We Are Septimius Properties</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          We specialize in delivering high-quality construction, bespoke architectural solutions, and premium rental properties. Our commitment to excellence and innovation sets us apart in the real estate industry.
+        </p>
+      </div>
+
+      <!-- Three Feature Blocks -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Professionals -->
+        <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+          <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Professionals</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We uphold the highest standards of professionalism through integrity, precision, and a commitment to quality in every project.
+          </p>
+        </div>
+
+        <!-- Trusted -->
+        <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+          <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Trusted</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Known for delivering highly rated properties and exceptional design services that consistently exceed client expectations.
+          </p>
+        </div>
+
+        <!-- Expert Designer -->
+        <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+          <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Expert Designer</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Our expert design team features qualified, registered architects and interior designers who ensure excellence and creativity in every project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section - Split Layout -->
+  <section class="py-0 bg-gray-50">
+    <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+      <!-- Left Side - Image -->
+      <div class="bg-gray-100 relative overflow-hidden">
+        <img 
+          src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-5.jpg" 
+          alt="Modern interior design" 
+          class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/20 to-transparent"></div>
+      </div>
+
+      <!-- Right Side - Dark Content -->
+      <div class="bg-gray-900 text-white p-12 md:p-16 flex flex-col justify-center relative overflow-hidden">
+        <!-- Subtle background pattern -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
+        </div>
+        
+        <div class="relative z-10">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Choose Us?</h2>
+          <p class="text-amber-400 text-lg mb-8 pb-4 border-b-2 border-amber-400 inline-block">
+            Excellence in Every Detail
+          </p>
+          
+          <ul class="space-y-6 mt-8">
+            <li class="flex items-start group">
+              <div class="flex-shrink-0 w-12 h-12 border-2 border-amber-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-amber-400 transition-colors duration-300">
+                <svg class="w-6 h-6 text-amber-400 group-hover:text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Choosing Septimius Properties means partnering with a company committed to quality, integrity, and excellence in every detail.
+              </p>
+            </li>
+            
+            <li class="flex items-start group">
+              <div class="flex-shrink-0 w-12 h-12 border-2 border-amber-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-amber-400 transition-colors duration-300">
+                <svg class="w-6 h-6 text-amber-400 group-hover:text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                We offer a full range of professional services with attention to detail and personalized solutions.
+              </p>
+            </li>
+            
+            <li class="flex items-start group">
+              <div class="flex-shrink-0 w-12 h-12 border-2 border-amber-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-amber-400 transition-colors duration-300">
+                <svg class="w-6 h-6 text-amber-400 group-hover:text-gray-900 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Experience comfort and style with our Holiday Rentals, designed for unforgettable stays.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-amber-500 font-bold uppercase text-sm tracking-wider mb-4">OUR PROJECT</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Recent Projects</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Explore our portfolio of exceptional projects that showcase our expertise in design, architecture, and property development.
+        </p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredProjects.map((project) => (
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <div class="relative overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
+              <p class="text-amber-500 font-semibold mb-4 uppercase text-sm tracking-wide">{project.category}</p>
+              <p class="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
+              <a 
+                href={project.slug} 
+                class="inline-flex items-center text-amber-500 font-semibold hover:text-amber-600 transition-colors uppercase tracking-wide text-sm group"
+              >
+                Learn More 
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Explore All Projects Button -->
+      <div class="text-center mt-12">
+        <a href="/projects" 
+          class="inline-block px-8 py-3 border-2 border-amber-500 text-amber-500 rounded-lg font-semibold 
+          hover:bg-amber-500 hover:text-white transition-colors duration-300 uppercase tracking-wide">
+          Explore All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-amber-500 font-bold uppercase text-sm tracking-wider mb-4">WHAT WE DO</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-amber-500 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Interior Design</h3>
+          <p class="text-gray-600 mb-4">Transform your spaces with our expert interior design services.</p>
+          <a href="/services/interior-design" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors text-sm uppercase tracking-wide">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-amber-500 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Architecture</h3>
+          <p class="text-gray-600 mb-4">Comprehensive architectural services from concept to completion.</p>
+          <a href="/services/architecture" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors text-sm uppercase tracking-wide">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-amber-500 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Holiday Rentals</h3>
+          <p class="text-gray-600 mb-4">Premium holiday rental properties for unforgettable stays.</p>
+          <a href="/services/holiday-rentals" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors text-sm uppercase tracking-wide">
+            Learn More →
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-amber-500 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Furniture</h3>
+          <p class="text-gray-600 mb-4">Curated selection of premium furniture and accessories.</p>
+          <a href="/services/premium-furniture" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors text-sm uppercase tracking-wide">
+            Learn More →
+          </a>
+        </div>
+      </div>
+
+      <!-- Explore All Services Button -->
+      <div class="text-center mt-12">
+        <a href="/services" 
+          class="inline-block px-8 py-3 border-2 border-amber-500 text-amber-500 rounded-lg font-semibold 
+          hover:bg-amber-500 hover:text-white transition-colors duration-300 uppercase tracking-wide">
+          Explore All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <span class="text-amber-400 text-sm uppercase tracking-[0.3em] mb-4 block">Let's Work Together</span>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-300">
+        Contact us today to discover how we can bring your vision to life with our expert design and construction services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-lg">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Get in Touch</span>
+          <span class="relative invisible">Get in Touch</span>
+        </a>
+        <a href="/services" class="inline-block px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 text-lg">
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(45deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(45deg);
+      }
+    }
+
+    @keyframes float-delayed {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes bounce-slow {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-delayed {
+      animation: float-delayed 5s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+
+    .animate-bounce-slow {
+      animation: bounce-slow 3s ease-in-out infinite;
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+  </style>
+
+</BaseLayout>

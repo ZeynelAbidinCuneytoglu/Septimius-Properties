@@ -1,0 +1,561 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Interior Design | Septimius Properties" description="Bespoke interior design services in Dublin">
+  <!-- Animated Background Element -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-1/2 -right-1/2 w-96 h-96 rounded-full bg-amber-200 opacity-10 blur-3xl animate-blob"></div>
+    <div class="absolute -bottom-1/2 -left-1/2 w-96 h-96 rounded-full bg-amber-300 opacity-10 blur-3xl animate-blob animation-delay-2000"></div>
+    <div class="absolute top-1/2 left-1/2 w-96 h-96 rounded-full bg-amber-400 opacity-10 blur-3xl animate-blob animation-delay-4000"></div>
+  </div>
+
+  <!-- Hero Section with Parallax -->
+  <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gray-900">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90"></div>
+      <img 
+        src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+        alt="Interior Design Services" 
+        class="w-full h-full object-cover opacity-60 scale-110 animate-subtle-zoom"
+      />
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 animate-fade-in-up">
+      <span class="block text-amber-400 text-sm md:text-base uppercase tracking-[0.3em] mb-6">Septimius Properties</span>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Interior Design <br/>Excellence</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">Where Vision Meets Craftsmanship</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-xl">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Book Consultation</span>
+          <span class="relative invisible">Book Consultation</span>
+        </a>
+        <a 
+          href="#services" 
+          class="inline-flex items-center gap-2 text-white hover:text-amber-400 transition-colors"
+          onclick="scrollToServices(event)"
+        >
+          <span>Explore Services</span>
+          <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 md:py-32 bg-white relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Left Image -->
+          <div class="w-full lg:w-1/2">
+            <div class="relative">
+              <img 
+                src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+                alt="Interior Design Expertise" 
+                class="w-full h-[300px] md:h-[600px] object-cover rounded-lg shadow-xl"
+              />
+              <!-- Decorative Elements -->
+              <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-amber-100 rounded-2xl -z-10"></div>
+              <div class="absolute -top-6 -left-6 w-2/3 h-2/3 border-2 border-amber-500 rounded-2xl -z-10"></div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="w-full lg:w-1/2">
+            <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">About Septimius Properties</span>
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+              Creating Extraordinary <br/>Interior Experiences
+            </h2>
+            <p class="text-gray-600 text-lg mb-12">
+              At Septimius Properties, we believe in creating spaces that inspire, comfort, and enhance your lifestyle. Our award-winning interior design team combines creativity with functionality to deliver extraordinary results that exceed expectations.
+            </p>
+
+            <!-- Animated Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              <div class="text-center" data-aos="fade-up">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="15">0</div>
+                <p class="text-gray-600">Years Experience</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="200">0</div>
+                <p class="text-gray-600">Projects Completed</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="50">0</div>
+                <p class="text-gray-600">Design Awards</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="100">0</div>
+                <p class="text-gray-600">Happy Clients</p>
+              </div>
+            </div>
+
+            <!-- Mission & Vision Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Mission -->
+              <div class="relative">
+                <span class="text-xl font-bold text-gray-900 mb-3 block">Our Mission</span>
+                <p class="text-gray-600">
+                  To transform spaces into exceptional environments that perfectly balance aesthetics and functionality.
+                </p>
+                <div class="absolute -left-4 top-0 h-full w-1 bg-amber-500"></div>
+              </div>
+
+              <!-- Vision -->
+              <div class="relative">
+                <span class="text-xl font-bold text-gray-900 mb-3 block">Our Vision</span>
+                <p class="text-gray-600">
+                  To be the leading force in innovative interior design, setting new standards for excellence and creativity.
+                </p>
+                <div class="absolute -left-4 top-0 h-full w-1 bg-amber-500"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-24 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">Our Services</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Exceptional Interior Design Solutions</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+        <p class="text-gray-600 text-lg">Transforming spaces with innovative design solutions tailored to your unique vision.</p>
+      </div>
+
+      <!-- Services Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Residential Design -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Residential Design</h3>
+            <p class="text-gray-600 mb-6">Transform your home into a personalized sanctuary that reflects your style and meets your needs.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Custom furniture layouts</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Color consultation</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Material selection</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Lighting design</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Commercial Design -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Commercial Design</h3>
+            <p class="text-gray-600 mb-6">Create inspiring workspaces that boost productivity and reflect your brand identity.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Space planning</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Brand integration</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Ergonomic solutions</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Sustainable design</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Renovation & Styling -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Renovation & Styling</h3>
+            <p class="text-gray-600 mb-6">Breathe new life into existing spaces with our renovation and styling expertise.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Full renovations</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Room makeovers</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Furniture selection</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Accessory styling</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-24 md:py-32 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="block text-amber-500 text-sm uppercase tracking-[0.3em] mb-4">How We Work</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8">Our Design Process</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto relative">
+        <!-- Timeline Line - Hidden on mobile -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-amber-200 hidden md:block"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-24">
+          <!-- Step 1 - Left -->
+          <div class="relative group">
+            <div class="flex items-center justify-end md:w-1/2 md:pr-12">
+              <div class="bg-white p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-shadow duration-300 w-full md:w-auto">
+                <!-- Icon Container -->
+                <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                  <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">01. Discovery & Vision</h3>
+                <p class="text-gray-600">Initial consultation to understand your vision, style preferences, and project requirements.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 2 - Right -->
+          <div class="relative group">
+            <div class="flex items-center md:w-1/2 md:ml-auto md:pl-12">
+              <div class="bg-white p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-shadow duration-300 w-full md:w-auto">
+                <!-- Icon Container -->
+                <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                  <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">02. Concept Development</h3>
+                <p class="text-gray-600">Creating detailed design concepts, space planning, and material selections.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 3 - Left -->
+          <div class="relative group">
+            <div class="flex items-center justify-end md:w-1/2 md:pr-12">
+              <div class="bg-white p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-shadow duration-300 w-full md:w-auto">
+                <!-- Icon Container -->
+                <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                  <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">03. Implementation</h3>
+                <p class="text-gray-600">Expert execution of the design plan with meticulous attention to detail.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 4 - Right -->
+          <div class="relative group">
+            <div class="flex items-center md:w-1/2 md:ml-auto md:pl-12">
+              <div class="bg-white p-8 rounded-lg shadow-xl group-hover:shadow-2xl transition-shadow duration-300 w-full md:w-auto">
+                <!-- Icon Container -->
+                <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+                  <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">04. Final Styling</h3>
+                <p class="text-gray-600">Adding the finishing touches that bring your space to life.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Recent Projects</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Explore our portfolio of exceptional projects that showcase our expertise in design, architecture, and property development.
+        </p>
+        <div class="h-0.5 w-24 bg-gray-300 mx-auto mt-6"></div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+              alt="Universal Café – Dublin" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Universal Café – Dublin</h3>
+            <p class="text-gray-600 mb-4">Design, Fitout, Furniture</p>
+            <a href="/projects/universal-cafe" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Lakehouse Property/DJI_0346.JPG" 
+              alt="Sheelin Lakehouse" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Sheelin Lakehouse</h3>
+            <p class="text-gray-600 mb-4">Design, Renovate, Furniture, Rental</p>
+            <a href="/projects/sheelin-lakehouse" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg" 
+              alt="Wicklow Holiday Home" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Wicklow Holiday Home</h3>
+            <p class="text-gray-600 mb-4">Architectural Design</p>
+            <a href="/projects/wicklow-holiday-home" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore All Projects Button -->
+      <div class="text-center mt-12">
+        <a href="/projects" 
+          class="inline-block px-8 py-3 border-2 border-amber-500 text-amber-500 rounded-lg font-semibold 
+          hover:bg-amber-500 hover:text-white transition-colors duration-300">
+          Explore All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <span class="text-amber-400 text-sm uppercase tracking-[0.3em] mb-4 block">Start Your Journey</span>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Space?</h2>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-300">
+        Contact us today to schedule a consultation with our expert interior design team. Let's bring your vision to life.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-lg">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Book a Consultation</span>
+          <span class="relative invisible">Book a Consultation</span>
+        </a>
+        <a href="/projects" class="inline-block px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 text-lg">
+          View Our Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Animate count up
+    const animateCount = (el) => {
+      const target = parseInt(el.getAttribute('data-target'));
+      const duration = 2000;
+      const steps = 50;
+      const stepValue = target / steps;
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += stepValue;
+        if (current > target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current);
+        }
+      }, duration / steps);
+    };
+
+    // Trigger animation when elements are in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate-count').forEach(el => observer.observe(el));
+
+    function scrollToServices(e) {
+      e.preventDefault();
+      const servicesSection = document.getElementById('services');
+      servicesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  </script>
+
+  <style>
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(20px, -30px) scale(1.1); }
+      50% { transform: translate(-20px, 20px) scale(0.9); }
+      75% { transform: translate(30px, 30px) scale(1.1); }
+    }
+
+    @keyframes subtle-zoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .animate-blob {
+      animation: blob 10s infinite;
+    }
+
+    .animate-subtle-zoom {
+      animation: subtle-zoom 20s ease-in-out infinite alternate;
+    }
+
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .space-y-24 > div {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</BaseLayout>

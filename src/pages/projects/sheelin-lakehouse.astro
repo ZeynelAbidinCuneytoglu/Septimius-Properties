@@ -1,0 +1,159 @@
+---
+// projects/sheelin-lakehouse.astro - Sheelin Lakehouse project detail page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectImages = [
+  '/Images/Lakehouse Property/DJI_0346.JPG',
+  '/Images/Lakehouse Property/5096-1.jpg',
+  '/Images/Lakehouse Property/lake house-01.jpg',
+  '/Images/Lakehouse Property/lake house-03.jpg',
+  '/Images/Lakehouse Property/lake house-07 (2).jpg',
+  '/Images/Lakehouse Property/lake house-16.jpg',
+  '/Images/Lakehouse Property/lake house-17.jpg',
+  '/Images/Lakehouse Property/lake house-18.jpg',
+  '/Images/Lakehouse Property/lake house-20.jpg',
+  '/Images/Lakehouse Property/lake house-29.jpg'
+];
+---
+
+<BaseLayout title="Sheelin Lakehouse" description="Complete renovation and design transformation of a lakeside property into a premium rental destination.">
+  
+  <!-- Full-Width Hero Section -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gray-900">
+      <img 
+        src={projectImages[0]} 
+        alt="Sheelin Lakehouse" 
+        class="w-full h-full object-cover opacity-80"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 container mx-auto px-4 pb-12">
+      <nav class="text-white text-sm mb-4">
+        <a href="/" class="hover:text-amber-400 transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/projects" class="hover:text-amber-400 transition-colors">Projects</a>
+        <span class="mx-2">/</span>
+        <span class="text-amber-400">Sheelin Lakehouse</span>
+      </nav>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Sheelin Lakehouse</h1>
+      <p class="text-xl text-white/90">Design, Renovate, Furniture, Rental</p>
+    </div>
+  </section>
+
+  <!-- Project Details Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Project Overview</h2>
+          
+          <div class="prose prose-lg max-w-none mb-8">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Sheelin Lakehouse is a stunning lakeside property transformation that combines architectural renovation with interior design excellence. This comprehensive project involved complete renovation of the property structure, bespoke interior design, and premium furniture selection to create a luxury rental destination.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              The property features carefully restored original architectural elements alongside modern amenities and contemporary design touches. Every aspect of the interior was thoughtfully designed to maximize comfort while celebrating the natural beauty of the lakeside setting through large windows and carefully positioned living spaces.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              The project showcases our expertise in managing complex renovation projects that require coordination between architectural modifications, interior design, and furniture procurement. The result is a cohesive, luxurious space that provides guests with an exceptional holiday experience.
+            </p>
+          </div>
+
+          <!-- Project Images Gallery -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {projectImages.slice(1).map((image, index) => (
+              <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img 
+                  src={image} 
+                  alt={`Sheelin Lakehouse - Image ${index + 2}`} 
+                  class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Sidebar - Project Info -->
+        <div class="lg:col-span-1">
+          <div class="bg-gray-50 p-8 rounded-lg sticky top-24">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Project Details</h3>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Location</h4>
+                <p class="text-gray-900 font-medium">County Cavan, Ireland</p>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Services</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-900">Interior Design</li>
+                  <li class="text-gray-900">Property Renovation</li>
+                  <li class="text-gray-900">Furniture Selection</li>
+                  <li class="text-gray-900">Rental Property Setup</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Year</h4>
+                <p class="text-gray-900 font-medium">2023</p>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Status</h4>
+                <p class="text-amber-500 font-medium">Completed</p>
+              </div>
+            </div>
+
+            <a 
+              href="/contact" 
+              class="mt-8 inline-block w-full bg-amber-500 text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors duration-300 uppercase tracking-wide"
+            >
+              Discuss Your Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Related Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/projects/universal-cafe" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img 
+              src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+              alt="Universal Café" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Universal Café – Dublin</h3>
+              <p class="text-gray-600">Design, Fitout, Furniture</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/projects/wicklow-holiday-home" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img 
+              src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg" 
+              alt="Wicklow Holiday Home" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Wicklow Holiday Home</h3>
+              <p class="text-gray-600">Architectural Design</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

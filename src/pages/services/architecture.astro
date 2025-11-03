@@ -1,0 +1,617 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Architectural Services | Septimius Properties" description="Architectural design, planning and project delivery">
+  <!-- Animated Background Element -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-1/2 -right-1/2 w-96 h-96 rounded-full bg-amber-200 opacity-10 blur-3xl animate-blob"></div>
+    <div class="absolute -bottom-1/2 -left-1/2 w-96 h-96 rounded-full bg-amber-300 opacity-10 blur-3xl animate-blob animation-delay-2000"></div>
+    <div class="absolute top-1/2 left-1/2 w-96 h-96 rounded-full bg-amber-400 opacity-10 blur-3xl animate-blob animation-delay-4000"></div>
+  </div>
+
+  <!-- Hero Section with Parallax -->
+  <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gray-900">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90"></div>
+      <img 
+        src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg" 
+        alt="Architectural Services" 
+        class="w-full h-full object-cover opacity-60 scale-110 animate-subtle-zoom"
+      />
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 animate-fade-in-up">
+      <span class="block text-amber-400 text-sm md:text-base uppercase tracking-[0.3em] mb-6">Septimius Properties</span>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Architectural Design <br/>& Delivery</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">Creative architecture that combines context, functionality and sustainability</p>
+      <div class="flex items-center justify-center gap-6">
+        <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-xl">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Book Consultation</span>
+          <span class="relative invisible">Book Consultation</span>
+        </a>
+        <a 
+          href="#services" 
+          class="inline-flex items-center gap-2 text-white hover:text-amber-400 transition-colors"
+          onclick="scrollToServices(event)"
+        >
+          <span>Explore Services</span>
+          <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 md:py-32 bg-white relative">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Left Image -->
+          <div class="w-full lg:w-1/2">
+            <div class="relative">
+              <img 
+                src="/Images/Lakehouse Property/48371789-7f8f-4150-bb56-fc6d2f360e92.avif" 
+                alt="Architecture showcase" 
+                class="w-full h-[300px] md:h-[600px] object-cover rounded-lg shadow-xl"
+              />
+              <!-- Decorative Elements -->
+              <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-amber-100 rounded-2xl -z-10"></div>
+              <div class="absolute -top-6 -left-6 w-2/3 h-2/3 border-2 border-amber-500 rounded-2xl -z-10"></div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="w-full lg:w-1/2">
+            <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">About Septimius Properties</span>
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+              Purpose-led <br/>Architecture
+            </h2>
+            <p class="text-gray-600 text-lg mb-12">
+              We deliver architecture from concept through planning to construction. Our approach balances aesthetics, technical rigour and user experience to create buildings that perform and inspire.
+            </p>
+
+            <!-- Animated Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              <div class="text-center" data-aos="fade-up">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="50">0</div>
+                <p class="text-gray-600">Projects</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="15">0</div>
+                <p class="text-gray-600">Years Experience</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="30">0</div>
+                <p class="text-gray-600">Awards</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl md:text-5xl font-bold text-amber-500 mb-2 animate-count" data-target="100">0</div>
+                <p class="text-gray-600">Happy Clients</p>
+              </div>
+            </div>
+
+            <!-- Services & Expertise Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+              <div class="relative">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Our Services</h4>
+                <ul class="text-gray-600 space-y-2">
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Concept & Feasibility
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Planning Applications
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Technical Design
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Contract Administration
+                  </li>
+                </ul>
+                <div class="absolute -left-4 top-0 h-full w-1 bg-amber-500"></div>
+              </div>
+              <div class="relative">
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Expertise</h4>
+                <ul class="text-gray-600 space-y-2">
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Residential & Commercial
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Renovations & Extensions
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Sustainable Design
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-5 h-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Site Analysis
+                  </li>
+                </ul>
+                <div class="absolute -left-4 top-0 h-full w-1 bg-amber-500"></div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-lg">
+                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </span>
+                <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Book Consultation</span>
+                <span class="relative invisible">Book Consultation</span>
+              </a>
+              <a href="/projects" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg text-center hover:bg-gray-800 transition-colors text-lg">
+                View Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-24 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">Our Services</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Architectural Solutions</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+        <p class="text-gray-600 text-lg">From initial concept to final delivery, we provide end-to-end architectural services.</p>
+      </div>
+
+      <!-- Services Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Residential Architecture -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Residential Architecture</h3>
+            <p class="text-gray-600 mb-6">Bespoke residential designs that prioritize livability, sustainability, and aesthetic excellence.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                New Build Homes
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Extensions & Renovations
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Holiday Homes
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Multi-Unit Developments
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Commercial Architecture -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Commercial Architecture</h3>
+            <p class="text-gray-600 mb-6">Functional and inspiring commercial spaces that enhance productivity and brand identity.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Office Buildings
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Retail Spaces
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Hospitality & Leisure
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Mixed-Use Developments
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Planning & Consultancy -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+          <div class="absolute inset-0 bg-gradient-to-b from-amber-500/0 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="p-8 relative z-10">
+            <div class="mb-6 w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-500 transition-colors">Planning & Consultancy</h3>
+            <p class="text-gray-600 mb-6">Expert guidance through the planning process to secure approvals efficiently.</p>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Planning Applications
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Feasibility Studies
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Site Analysis
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-amber-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Building Regulations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-24 md:py-32 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="block text-amber-500 text-sm uppercase tracking-[0.3em] mb-4">How We Work</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8">Our Design Process</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto relative">
+        <!-- Timeline Line - Hidden on mobile -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-amber-200 hidden md:block"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-24">
+          <!-- Step 1 - Left -->
+          <div class="relative group">
+            <div class="flex flex-col md:flex-row items-center md:justify-end md:w-1/2 md:pr-12">
+              <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-amber-500 font-bold text-sm">STEP 01</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Brief & Feasibility</h3>
+                  </div>
+                </div>
+                <p class="text-gray-600">We agree the brief and test feasibility to set project parameters, ensuring your vision is achievable within budget and regulations.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 2 - Right -->
+          <div class="relative group">
+            <div class="flex flex-col md:flex-row items-center md:w-1/2 md:ml-auto md:pl-12">
+              <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-amber-500 font-bold text-sm">STEP 02</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Concept & Planning</h3>
+                  </div>
+                </div>
+                <p class="text-gray-600">Concept design development, client sign-off, and strategic planning application preparation for approval.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 3 - Left -->
+          <div class="relative group">
+            <div class="flex flex-col md:flex-row items-center md:justify-end md:w-1/2 md:pr-12">
+              <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-amber-500 font-bold text-sm">STEP 03</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Technical Design</h3>
+                  </div>
+                </div>
+                <p class="text-gray-600">Detailed drawings, specifications, and tender documentation prepared for construction phase.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+
+          <!-- Step 4 - Right -->
+          <div class="relative group">
+            <div class="flex flex-col md:flex-row items-center md:w-1/2 md:ml-auto md:pl-12">
+              <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-16 h-16 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-amber-500 font-bold text-sm">STEP 04</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Construction & Handover</h3>
+                  </div>
+                </div>
+                <p class="text-gray-600">On-site coordination, quality control, and final handover ensuring excellence throughout.</p>
+              </div>
+            </div>
+            <!-- Timeline Dot - Hidden on mobile -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-500 rounded-full border-4 border-white shadow hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Projects -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Recent Projects</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Explore our portfolio of exceptional projects that showcase our expertise in design, architecture, and property development.
+        </p>
+        <div class="h-0.5 w-24 bg-gray-300 mx-auto mt-6"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+              alt="Universal Café – Dublin" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Universal Café – Dublin</h3>
+            <p class="text-gray-600 mb-4">Design, Fitout, Furniture</p>
+            <a href="/projects/universal-cafe" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Lakehouse Property/DJI_0346.JPG" 
+              alt="Sheelin Lakehouse" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Sheelin Lakehouse</h3>
+            <p class="text-gray-600 mb-4">Design, Renovate, Furniture, Rental</p>
+            <a href="/projects/sheelin-lakehouse" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden">
+            <img 
+              src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg" 
+              alt="Wicklow Holiday Home" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Wicklow Holiday Home</h3>
+            <p class="text-gray-600 mb-4">Architectural Design</p>
+            <a href="/projects/wicklow-holiday-home" class="text-amber-500 font-semibold hover:text-amber-600 transition-colors">
+              View Project →
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="/projects" class="inline-block px-8 py-3 border-2 border-amber-500 text-amber-500 rounded-lg font-semibold hover:bg-amber-500 hover:text-white transition-colors duration-300">
+          Explore All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">Contact us today to schedule a consultation with our expert architectural team.</p>
+      <a href="/contact" class="inline-block bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+        Book a Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Animate count up
+    const animateCount = (el) => {
+      const target = parseInt(el.getAttribute('data-target'));
+      const duration = 2000;
+      const steps = 50;
+      const stepValue = target / steps;
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += stepValue;
+        if (current > target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current);
+        }
+      }, duration / steps);
+    };
+
+    // Trigger animation when elements are in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate-count').forEach(el => observer.observe(el));
+
+    function scrollToServices(e) {
+      e.preventDefault();
+      const servicesSection = document.getElementById('services');
+      servicesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  </script>
+
+  <style>
+    /* Add these styles to your global CSS or in a style tag */
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(20px, -30px) scale(1.1); }
+      50% { transform: translate(-20px, 20px) scale(0.9); }
+      75% { transform: translate(30px, 30px) scale(1.1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes subtle-zoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .animate-blob {
+      animation: blob 10s infinite;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .animate-subtle-zoom {
+      animation: subtle-zoom 20s ease-in-out infinite alternate;
+    }
+
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add any additional mobile-specific styles here */
+    @media (max-width: 768px) {
+      .space-y-24 > div {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,156 @@
+---
+// projects/wicklow-holiday-home.astro - Wicklow Holiday Home project detail page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectImages = [
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (1).jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (2).jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41.jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42 (1).jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42 (2).jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42.jpeg',
+  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg'
+];
+---
+
+<BaseLayout title="Wicklow Holiday Home" description="Contemporary architectural design for a luxury holiday home in the scenic Wicklow mountains.">
+  
+  <!-- Hero Section with Project Image -->
+  <section class="relative h-96 md:h-[600px] flex items-end">
+    <div class="absolute inset-0 bg-gray-900">
+      <img 
+        src={projectImages[0]} 
+        alt="Wicklow Holiday Home" 
+        class="w-full h-full object-cover opacity-80"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 container mx-auto px-4 pb-12">
+      <nav class="text-white text-sm mb-4">
+        <a href="/" class="hover:text-amber-400 transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/projects" class="hover:text-amber-400 transition-colors">Projects</a>
+        <span class="mx-2">/</span>
+        <span class="text-amber-400">Wicklow Holiday Home</span>
+      </nav>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Wicklow Holiday Home</h1>
+      <p class="text-xl text-white/90">Architectural Design</p>
+    </div>
+  </section>
+
+  <!-- Project Details Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Project Overview</h2>
+          
+          <div class="prose prose-lg max-w-none mb-8">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              The Wicklow Holiday Home is a contemporary architectural masterpiece designed to harmonize with its stunning mountain setting. This project showcases our expertise in creating buildings that respect their natural environment while providing modern luxury and comfort.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              The design emphasizes large glazed areas that frame panoramic mountain views, creating a seamless connection between indoor and outdoor spaces. The architectural form responds to the site's topography, with carefully positioned volumes that maximize solar gain and minimize environmental impact.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Sustainable design principles were integral to the project, incorporating passive heating strategies, energy-efficient building systems, and locally sourced materials. The result is a home that not only provides exceptional holiday accommodation but also represents a thoughtful approach to contemporary architecture in sensitive landscapes.
+            </p>
+          </div>
+
+          <!-- Project Images Gallery -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {projectImages.slice(1).map((image, index) => (
+              <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img 
+                  src={image} 
+                  alt={`Wicklow Holiday Home - Image ${index + 2}`} 
+                  class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Sidebar - Project Info -->
+        <div class="lg:col-span-1">
+          <div class="bg-gray-50 p-8 rounded-lg sticky top-24">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Project Details</h3>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Location</h4>
+                <p class="text-gray-900 font-medium">Wicklow Mountains, Ireland</p>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Services</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-900">Architectural Design</li>
+                  <li class="text-gray-900">Planning Applications</li>
+                  <li class="text-gray-900">Sustainable Design</li>
+                  <li class="text-gray-900">Construction Oversight</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Year</h4>
+                <p class="text-gray-900 font-medium">2024</p>
+              </div>
+              
+              <div>
+                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Status</h4>
+                <p class="text-amber-500 font-medium">Completed</p>
+              </div>
+            </div>
+
+            <a 
+              href="/contact" 
+              class="mt-8 inline-block w-full bg-amber-500 text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-amber-600 transition-colors duration-300 uppercase tracking-wide"
+            >
+              Discuss Your Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Related Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="/projects/universal-cafe" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img 
+              src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+              alt="Universal Café" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Universal Café – Dublin</h3>
+              <p class="text-gray-600">Design, Fitout, Furniture</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/projects/sheelin-lakehouse" class="group">
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+            <img 
+              src="/Images/Lakehouse Property/DJI_0346.JPG" 
+              alt="Sheelin Lakehouse" 
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-500 transition-colors">Sheelin Lakehouse</h3>
+              <p class="text-gray-600">Design, Renovate, Furniture, Rental</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
