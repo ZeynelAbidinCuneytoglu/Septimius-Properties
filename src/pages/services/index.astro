@@ -32,18 +32,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4">
       
-      <!-- Service 1: Interior Design (Text Left, Image Right) -->
+      <!-- Service 1: Architecture & Interior Design (Text Left, Image Right) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-32">
         <div class="order-2 md:order-1">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Interior Design</h2>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Architecture & Interior Design</h2>
           <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
-            Transform your spaces with our expert interior design services. Our qualified, registered interior designers work closely with you to create stunning, functional environments.
+            Our integrated approach combines architectural precision with interior creativity. From initial concept to final fitout, we create stunning, functional environments that inspire and endure.
           </p>
           <p class="text-gray-600 leading-relaxed mb-8">
-            From concept to completion, we handle every detail including space planning, color schemes, material selection, lighting design, and furniture curation. Whether it's a residential home, commercial office, or hospitality venue, we deliver innovative designs that combine aesthetics with practicality.
+            Whether you need a complete architectural build or a transformative interior fitout, our team of qualified architects and registered interior designers combines creativity with technical rigour to deliver extraordinary results.
           </p>
           <a 
-            href="/services/interior-design" 
+            href="/services/architecture-and-interiors" 
             class="inline-block bg-amber-500 text-white font-semibold py-3 px-8 hover:bg-amber-600 transition-colors duration-300 uppercase"
           >
             READ MORE
@@ -51,42 +51,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div class="order-1 md:order-2">
           <img 
-            src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-3.jpg" 
-            alt="Interior Design" 
+            src="Images/Architect office images/Architecture-1.jpeg" 
+            alt="Architecture and Interior Design" 
             class="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
       </div>
 
-      <!-- Service 2: Architecture (Image Left, Text Right) -->
+      <!-- Service 2: Holiday Rentals (Image Left, Text Right) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-32">
         <div class="order-1 md:order-1">
           <img 
-            src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg" 
-            alt="Architecture" 
+            src="/Images/Lakehouse Property/lake house-01.jpg" 
+            alt="Holiday Rentals" 
             class="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
         <div class="order-2 md:order-2">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Architecture</h2>
-          <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
-            Our registered architects provide comprehensive architectural services from initial concept development through to construction completion.
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-8">
-            We specialize in residential, commercial, and renovation projects, ensuring that every design is both aesthetically pleasing and structurally sound. Our architectural solutions incorporate sustainable design principles, energy efficiency, and compliance with all local building regulations.
-          </p>
-          <a 
-            href="/services/architecture" 
-            class="inline-block bg-amber-500 text-white font-semibold py-3 px-8 hover:bg-amber-600 transition-colors duration-300 uppercase"
-          >
-            READ MORE
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 3: Holiday Rentals (Text Left, Image Right) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-32">
-        <div class="order-2 md:order-1">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Holiday Rentals</h2>
           <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
             Experience comfort and style with our premium holiday rental properties. Each property is carefully selected and maintained to the highest standards.
@@ -101,25 +82,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             READ MORE
           </a>
         </div>
-        <div class="order-1 md:order-2">
-          <img 
-            src="/Images/Lakehouse Property/lake house-01.jpg" 
-            alt="Holiday Rentals" 
-            class="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
       </div>
 
-      <!-- Service 4: Premium Furniture (Image Left, Text Right) -->
+      <!-- Service 3: Premium Furniture (Text Left, Image Right) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="order-1 md:order-1">
-          <img 
-            src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-4.jpg" 
-            alt="Premium Furniture" 
-            class="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
-        <div class="order-2 md:order-2">
+        <div class="order-2 md:order-1">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Premium Furniture</h2>
           <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
             Elevate your interior spaces with our curated selection of premium furniture and accessories from trusted manufacturers and designers.
@@ -133,6 +100,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           >
             READ MORE
           </a>
+        </div>
+        <div class="order-1 md:order-2">
+          <img 
+            src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-4.jpg" 
+            alt="Premium Furniture" 
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
 
@@ -227,24 +201,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Stats Cards at Bottom -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto">
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-          <div class="text-4xl font-bold text-amber-400 mb-2">15+</div>
-          <div class="text-sm text-gray-300 uppercase tracking-wider">Years Experience</div>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-          <div class="text-4xl font-bold text-amber-400 mb-2">200+</div>
-          <div class="text-sm text-gray-300 uppercase tracking-wider">Projects Completed</div>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-          <div class="text-4xl font-bold text-amber-400 mb-2">100+</div>
-          <div class="text-sm text-gray-300 uppercase tracking-wider">Happy Clients</div>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-          <div class="text-4xl font-bold text-amber-400 mb-2">50+</div>
-          <div class="text-sm text-gray-300 uppercase tracking-wider">Design Awards</div>
+</BaseLayout>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-amber-400 text-sm uppercase tracking-[0.3em] mb-4 block">Let's Work Together</span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+        <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+          Whether you need interior design, architecture, holiday rentals, or premium furniture, our expert team is ready to bring your vision to life.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium transition duration-300 ease-out border-2 border-amber-500 rounded-lg shadow-md text-lg">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-amber-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-amber-500 transition-all duration-300 transform group-hover:translate-x-full ease">Get in Touch</span>
+            <span class="relative invisible">Get in Touch</span>
+          </a>
+          <a href="/projects" class="inline-block px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 text-lg">
+            View Our Work
+          </a>
         </div>
       </div>
     </div>

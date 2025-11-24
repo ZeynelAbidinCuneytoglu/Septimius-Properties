@@ -1,0 +1,237 @@
+---
+// services/architecture-and-interiors.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Architecture & Interior Design" description="Comprehensive architectural and interior design services by Septimius Properties.">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gray-900">
+      <img 
+        src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+        alt="Architecture and Interiors" 
+        class="w-full h-full object-cover opacity-60"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-4 animate-fade-in-up">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Architecture & <br/>Interior Design</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">Where Vision Meets Craftsmanship</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-amber-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-amber-600 transition-colors uppercase tracking-wide">
+          Start Your Project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combined About Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">Our Expertise</span>
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+            Integrated Design <br/>Excellence
+          </h2>
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+            At Septimius Properties, we believe that architecture and interior design are inseparable. Our integrated approach ensures that the exterior form and interior function work in perfect harmony to create spaces that inspire, comfort, and enhance your lifestyle.
+          </p>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            Whether you need a complete architectural build or a transformative interior fitout, our team of qualified architects and registered interior designers combines creativity with technical rigour to deliver extraordinary results that exceed expectations.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-8 mt-12">
+            <div class="border-l-4 border-amber-500 pl-6">
+              <span class="block text-3xl font-bold text-gray-900 mb-2 count-up" data-target="100">0</span>
+              <span class="text-gray-500 uppercase tracking-wider text-sm">Projects Completed</span>
+            </div>
+            <div class="border-l-4 border-amber-500 pl-6">
+              <span class="block text-3xl font-bold text-gray-900 mb-2 count-up" data-target="15">0</span>
+              <span class="text-gray-500 uppercase tracking-wider text-sm">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg" alt="Architecture" class="rounded-lg shadow-lg w-full h-64 object-cover mt-12"/>
+            <img src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-3.jpg" alt="Interior Design" class="rounded-lg shadow-lg w-full h-64 object-cover"/>
+          </div>
+          <!-- Decorative Element -->
+          <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gray-50 rounded-full opacity-50 blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">What We Do</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8">Comprehensive Services</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-8 h-8 text-amber-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Architectural Design</h3>
+          <p class="text-gray-600 mb-6">From initial concept to planning permission and construction drawings, we handle all aspects of architectural design.</p>
+          <ul class="space-y-2 text-gray-500">
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Concept Design</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Planning Applications</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Construction Drawings</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-8 h-8 text-amber-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Interior Design</h3>
+          <p class="text-gray-600 mb-6">Creating beautiful, functional interiors that reflect your style and enhance your quality of life.</p>
+          <ul class="space-y-2 text-gray-500">
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Space Planning</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Material Selection</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Bespoke Furniture</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+            <svg class="w-8 h-8 text-amber-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Project Management</h3>
+          <p class="text-gray-600 mb-6">End-to-end project management to ensure your build or renovation is delivered on time and within budget.</p>
+          <ul class="space-y-2 text-gray-500">
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Site Supervision</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Cost Control</li>
+            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-amber-500 rounded-full mr-2"></span>Contract Administration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">How We Work</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8">Our Design Process</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+
+      <div class="relative">
+        <!-- Connecting Line -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="bg-white p-6 text-center relative">
+            <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10 ring-8 ring-white">1</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Consultation</h3>
+            <p class="text-gray-600 text-sm">We meet to discuss your vision, requirements, and budget to establish a clear brief.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white p-6 text-center relative">
+            <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10 ring-8 ring-white">2</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Concept</h3>
+            <p class="text-gray-600 text-sm">We develop initial design concepts, layouts, and mood boards for your review.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white p-6 text-center relative">
+            <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10 ring-8 ring-white">3</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Development</h3>
+            <p class="text-gray-600 text-sm">Detailed drawings, material selection, and technical specifications are prepared.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-white p-6 text-center relative">
+            <div class="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10 ring-8 ring-white">4</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Delivery</h3>
+            <p class="text-gray-600 text-sm">We oversee the construction and fitout process to ensure a perfect result.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/Images/Universal%20Cafe/Universal%20Cafe%20-%20Septimius%20Pro.-6.jpg')] bg-cover bg-center opacity-20"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Transform Your Space?</h2>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Contact us today to discuss your architectural or interior design project.</p>
+      <a href="/contact" class="inline-block bg-amber-500 text-white px-10 py-4 rounded-lg font-bold hover:bg-amber-600 transition-colors uppercase tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Counter Script -->
+  <script>
+    const animateCounter = (element) => {
+      const target = parseInt(element.getAttribute('data-target'));
+      const duration = 2000;
+      const steps = 60;
+      const increment = target / steps;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, duration / steps);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.count-up').forEach(counter => {
+      observer.observe(counter);
+    });
+  </script>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+  </style>
+</BaseLayout>
