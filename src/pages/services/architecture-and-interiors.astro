@@ -9,7 +9,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-gray-900">
       <img 
-        src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-1.jpg" 
+        src="/Images/Wicklow House/WicklowHouse-3.png" 
         alt="Architecture and Interiors" 
         class="w-full h-full object-cover opacity-60"
       />
@@ -30,37 +30,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- Combined About Section -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <!-- Left Column: Text Content -->
+        <div class="order-2 lg:order-1">
           <span class="text-amber-500 text-sm uppercase tracking-[0.3em] mb-4 block">Our Expertise</span>
-          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-            Integrated Design <br/>Excellence
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            Integrated Design Excellence
           </h2>
+          <div class="w-24 h-1 bg-amber-500 mb-8"></div>
+          
           <p class="text-gray-600 text-lg mb-6 leading-relaxed">
             At Septimius Properties, we believe that architecture and interior design are inseparable. Our integrated approach ensures that the exterior form and interior function work in perfect harmony to create spaces that inspire, comfort, and enhance your lifestyle.
           </p>
-          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+          <p class="text-gray-600 text-lg mb-10 leading-relaxed">
             Whether you need a complete architectural build or a transformative interior fitout, our team of qualified architects and registered interior designers combines creativity with technical rigour to deliver extraordinary results that exceed expectations.
           </p>
           
+          <!-- Statistics -->
           <div class="grid grid-cols-2 gap-8 mt-12">
             <div class="border-l-4 border-amber-500 pl-6">
-              <span class="block text-3xl font-bold text-gray-900 mb-2 count-up" data-target="100">0</span>
-              <span class="text-gray-500 uppercase tracking-wider text-sm">Projects Completed</span>
+              <span class="block text-4xl font-bold text-gray-900 mb-2 count-up" data-target="100">0</span>
+              <span class="text-gray-500 uppercase tracking-wider text-sm font-medium">Projects Completed</span>
             </div>
             <div class="border-l-4 border-amber-500 pl-6">
-              <span class="block text-3xl font-bold text-gray-900 mb-2 count-up" data-target="15">0</span>
-              <span class="text-gray-500 uppercase tracking-wider text-sm">Years Experience</span>
+              <span class="block text-4xl font-bold text-gray-900 mb-2 count-up" data-target="15">0</span>
+              <span class="text-gray-500 uppercase tracking-wider text-sm font-medium">Years Experience</span>
             </div>
           </div>
         </div>
-        <div class="relative">
-          <div class="grid grid-cols-2 gap-4">
-            <img src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg" alt="Architecture" class="rounded-lg shadow-lg w-full h-64 object-cover mt-12"/>
-            <img src="/Images/Universal Cafe/Universal Cafe - Septimius Pro.-3.jpg" alt="Interior Design" class="rounded-lg shadow-lg w-full h-64 object-cover"/>
+
+        <!-- Right Column: Image with Decorative Elements -->
+        <div class="order-1 lg:order-2 relative">
+          <!-- Main Image Container -->
+          <div class="relative z-10">
+            <img 
+              src="/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg" 
+              alt="Architecture and Design Excellence" 
+              class="rounded-lg shadow-2xl w-full h-[550px] object-cover"
+            />
           </div>
-          <!-- Decorative Element -->
-          <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gray-50 rounded-full opacity-50 blur-3xl"></div>
+          
+          <!-- Decorative Elements -->
+          <div class="absolute -bottom-6 -right-6 w-full h-full bg-amber-100 rounded-lg -z-0"></div>
+          <div class="absolute -top-6 -left-6 w-2/3 h-2/3 border-4 border-amber-500 rounded-lg -z-0"></div>
         </div>
       </div>
     </div>

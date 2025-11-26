@@ -1,167 +1,187 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const FORM_ACTION = 'https://formspree.io/f/your-form-id';
+const FORM_ACTION = 'https://formspree.io/f/mkglwlla';
 
 const contactDetails = [
   {
-    icon: "🏢",
-    title: "Address",
-    details: "Landscape House, Baldonnell Business Park, Citywest, Dublin 22"
+    icon: "📍",
+    title: "Visit Us",
+    details: "Landscape House, Baldonnell Business Park, Citywest, Dublin 22",
+    link: "https://maps.google.com/?q=Landscape+House,+Baldonnell+Business+Park,+Citywest,+Dublin+22"
   },
   {
     icon: "📞",
-    title: "Phone",
-    details: "01-123 4567",
-    link: "tel:011234567"
+    title: "Call Us",
+    details: "+353 41 215 1278",
+    link: "tel:+353412151278"
   },
   {
-    icon: "📧",
-    title: "Email",
+    icon: "✉️",
+    title: "Email Us",
     details: "info@septimiusproperties.com",
     link: "mailto:info@septimiusproperties.com"
   }
 ];
 
 const socialLinks = [
-  { name: 'Instagram', icon: 'instagram', url: '#' },
-  { name: 'TikTok', icon: 'tiktok', url: '#' },
-  { name: 'Facebook', icon: 'facebook', url: '#' },
-  { name: 'LinkedIn', icon: 'linkedin', url: '#' }
+  { name: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/septimiusproperties/' },
 ];
 ---
 
-<BaseLayout title="Contact Us">
-  <main class="container mx-auto px-4 py-16">
-    <div class="max-w-3xl mx-auto mb-12 text-center">
-      <h1 class="text-4xl font-bold mb-4">Get in Touch</h1>
-      <p class="text-lg text-muted-foreground">
-        Have a question or want to discuss a project? We'd love to hear from you.
+<BaseLayout title="Contact Us" description="Get in touch with Septimius Properties for your architectural and interior design needs.">
+  
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center">
+    <div class="absolute inset-0 bg-gray-900">
+      <img 
+        src="/Images/Wicklow House/WicklowHouse-2.png" 
+        alt="Contact Septimius Properties" 
+        class="w-full h-full object-cover opacity-60"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Get in Touch</h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+        Ready to start your next project? We'd love to hear from you.
       </p>
     </div>
+  </section>
 
-    <div class="grid lg:grid-cols-12 gap-8">
-      <!-- Contact Info -->
-      <div class="lg:col-span-4 space-y-6">
-        {contactDetails.map(item => (
-          <div class="bg-white rounded-lg shadow-sm p-6">
-            <div class="flex items-start gap-4">
-              <span class="text-2xl">{item.icon}</span>
-              <div>
-                <h3 class="font-medium mb-1">{item.title}</h3>
-                {item.link ? (
-                  <a href={item.link} class="text-[#cfa604] hover:text-[#b89203]">
-                    {item.details}
-                  </a>
-                ) : (
-                  <p class="text-gray-600">{item.details}</p>
-                )}
-              </div>
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Information -->
+        <div class="lg:col-span-4 space-y-8">
+          <div class="bg-white rounded-xl shadow-sm p-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Details</h2>
+            <div class="space-y-6">
+              {contactDetails.map(item => (
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center text-xl">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">{item.title}</h3>
+                    <a href={item.link} class="text-gray-600 hover:text-amber-600 transition-colors block mt-1">
+                      {item.details}
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
 
-        <!-- Social Links -->
-        <div class="bg-white rounded-lg shadow-sm p-6">
-          <h3 class="font-medium mb-4">Follow Us</h3>
-          <div class="flex gap-4">
-            {socialLinks.map(social => (
-              <a
-                href={social.url}
-                class="text-[#cfa604] hover:text-[#b89203] text-2xl"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Follow us on ${social.name}`}
+          <div class="bg-gray-900 rounded-xl shadow-sm p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6">Follow Us</h2>
+            <p class="text-gray-400 mb-6">Stay updated with our latest projects and design inspiration.</p>
+            <div class="flex gap-4">
+              {socialLinks.map(social => (
+                <a
+                  href={social.url}
+                  class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow us on ${social.name}`}
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 014.482 2.52c.636-.247 1.363-.416 2.427-.465C8.056 2.012 8.466 2 10.895 2h2.84zm-.081 1.802h-2.48c-2.34 0-2.701.009-3.65.053-.957.044-1.478.204-1.825.338-.459.178-.786.39-1.13.734-.344.343-.556.67-.734 1.13-.134.346-.293.867-.338 1.824-.044.95-.053 1.31-.053 3.651v.48c0 2.34.009 2.701.053 3.65.044.958.204 1.479.338 1.825.178.459.39.786.734 1.13.343.344.67.556 1.13.734.346.134.867.293 1.824.338.95.044 1.31.053 3.651.053h.48c2.34 0 2.701-.009 3.65-.053.958-.044 1.479-.204 1.825-.338.459-.178.786-.39 1.13-.734.344-.343.556-.67.734-1.13.134-.346.293-.867.338-1.824.044-.95.053-1.31.053-3.651v-.48c0-2.34-.009-2.701-.053-3.65-.044-.958-.204-1.479-.338-1.825a3.04 3.04 0 00-.734-1.13 3.04 3.04 0 00-1.13-.734c-.346-.134-.867-.293-1.824-.338-.95-.044-1.31-.053-3.651-.053zm0 3.063a5.29 5.29 0 110 10.58 5.29 5.29 0 010-10.58zm0 1.802a3.488 3.488 0 100 6.976 3.488 3.488 0 000-6.976zm5.488-3.403a1.237 1.237 0 110 2.474 1.237 1.237 0 010-2.474z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-8">
+          <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Send us a Message</h2>
+            <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <form id="contact-form" class="space-y-6" method="POST" action={FORM_ACTION}>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2" for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2" for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2" for="subject">Subject</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none"
+                >
+                  <option value="">Select a subject</option>
+                  <option>New Project Inquiry</option>
+                  <option>Architecture Services</option>
+                  <option>Interior Design</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2" for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none resize-none"
+                  placeholder="Tell us about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full md:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg uppercase tracking-wide"
               >
-                <i class={`fab fa-${social.icon}`}></i>
-              </a>
-            ))}
+                Send Message
+              </button>
+              <p id="form-status" class="text-sm text-gray-600 mt-4 font-medium" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>
-
-      <!-- Contact Form -->
-      <div class="lg:col-span-8 bg-white rounded-lg shadow-sm p-8">
-        <form id="contact-form" class="space-y-6" method="POST" action={FORM_ACTION}>
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium mb-2" for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
-              />
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-2" for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2" for="subject">Subject</label>
-            <select
-              id="subject"
-              name="subject"
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
-            >
-              <option value="">Select a subject</option>
-              <option>Property Inquiry</option>
-              <option>General Question</option>
-              <option>Business Proposal</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2" for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#cfa604] focus:border-[#cfa604]"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full sm:w-auto px-6 py-3 bg-[#cfa604] hover:bg-[#b89203] text-white rounded-md transition-colors"
-          >
-            Send Message
-          </button>
-          <p id="form-status" class="text-sm text-gray-600 mt-2" aria-live="polite"></p>
-        </form>
-      </div>
     </div>
+  </section>
 
-    <!-- Full-width Image -->
-    <div class="mt-16">
-      <img
-        src="/Images/Lakehouse Property/457f943b-2c81-4471-91fb-9f1fb2e06de3.avif"
-        alt="Septimius Properties Office"
-        class="w-full h-[600px] object-cover rounded-lg shadow-lg"
-      />
-    </div>
-  </main>
 
   <script>
-    // Form handling script remains the same
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
     
     if (form) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        status.textContent = 'Sending...';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
         
         try {
           const response = await fetch(form.action, {
@@ -171,13 +191,19 @@ const socialLinks = [
           });
           
           if (response.ok) {
-            status.textContent = 'Thank you for your message. We\'ll get back to you soon!';
+            status.textContent = 'Thank you! Your message has been sent successfully.';
+            status.className = 'text-sm text-green-600 mt-4 font-medium';
             form.reset();
           } else {
             status.textContent = 'Oops! There was a problem sending your message.';
+            status.className = 'text-sm text-red-600 mt-4 font-medium';
           }
         } catch (error) {
           status.textContent = 'Oops! There was a problem sending your message.';
+          status.className = 'text-sm text-red-600 mt-4 font-medium';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
         }
       });
     }

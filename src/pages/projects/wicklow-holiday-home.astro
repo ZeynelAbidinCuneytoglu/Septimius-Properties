@@ -3,12 +3,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const projectImages = [
-  '/Images/Architect office images/Architecture-1.jpeg',
-  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41 (2).jpeg',
-  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.41.jpeg',
-  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42 (1).jpeg',
-  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42 (2).jpeg',
-  '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.42.jpeg',
+  '/Images/Wicklow House/WicklowHouse-1.png',
+  '/Images/Wicklow House/WicklowHouse-2.png',
+  '/Images/Wicklow House/WicklowHouse-3.png',
   '/Images/Architect office images/WhatsApp Image 2025-09-28 at 15.56.43.jpeg'
 ];
 ---
@@ -16,7 +13,7 @@ const projectImages = [
 <BaseLayout title="Wicklow Holiday Home" description="Contemporary architectural design for a luxury holiday home in the scenic Wicklow mountains.">
   
   <!-- Hero Section with Project Image -->
-  <section class="relative h-screen flex items-end">
+  <section class="relative h-screen flex items-center justify-center">
     <div class="absolute inset-0 bg-gray-900">
       <img 
         src={projectImages[0]} 
@@ -26,7 +23,7 @@ const projectImages = [
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
     </div>
     
-    <div class="relative z-10 container mx-auto px-4 pb-12">
+    <div class="relative z-10 container mx-auto px-4 pb-12 text-center">
       <nav class="text-white text-sm mb-4">
         <a href="/" class="hover:text-amber-400 transition-colors">Home</a>
         <span class="mx-2">/</span>
