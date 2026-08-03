@@ -1,6 +1,9 @@
 ---
 // about.astro - About Us page with enhanced design
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SmartImage from '../components/SmartImage.astro';
+
+const TEAM_SIZES = '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
 ---
 
 <BaseLayout title="About Us" description="Learn about Septimius Properties - delivering high-quality construction, bespoke architectural solutions, and premium rental properties.">
@@ -9,9 +12,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="relative h-96 md:h-[600px] flex items-center justify-center">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src="/Images/Wicklow House/wicklow-02.png" 
-        alt="Interior design background" 
+      <SmartImage
+        src="wicklow-house/wicklow-02.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-60"
       />
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -34,9 +39,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Team Photo on Left -->
         <div class="order-2 lg:order-1 relative">
-          <img 
-            src="/Images/Architect office images/office-01.jpg" 
-            alt="Septimius Properties team" 
+          <SmartImage
+            src="architect-office-images/office-01.jpg"
+            alt="Septimius Properties team"
+            sizes="(min-width: 1024px) 50vw, 100vw"
             class="w-full rounded-lg shadow-xl relative z-10"
           />
           <!-- Decorative Elements -->
@@ -110,9 +116,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Team Member 1 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
           <div class="relative overflow-hidden">
-            <img 
-              src="/Images/avatar-placeholder.jpg" 
-              alt="Abdullah Duibi - CEO" 
+            <SmartImage
+              src="avatar-placeholder.jpg"
+              alt="Abdullah Duibi - CEO"
+              sizes={TEAM_SIZES}
               class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -126,9 +133,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Team Member 2 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
           <div class="relative overflow-hidden">
-            <img 
-              src="/Images/Team Photos/Radwan.jpeg"
-              alt="Radwan Bazama - General Manager" 
+            <SmartImage
+              src="team-photos/radwan.jpg"
+              alt="Radwan Bazama - General Manager"
+              sizes={TEAM_SIZES}
               class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -142,9 +150,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Team Member 3 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
           <div class="relative overflow-hidden">
-            <img 
-              src="/Images/Team Photos/Riyadh.jpeg"
-              alt="Riyad Simon - Project Manager" 
+            <SmartImage
+              src="team-photos/riyadh.jpg"
+              alt="Riyad Simon - Project Manager"
+              sizes={TEAM_SIZES}
               class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

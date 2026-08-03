@@ -12,6 +12,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+// Astro.site comes from astro.config.mjs, so these resolve to absolute URLs
+// that crawlers and social scrapers can actually follow.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/og-image.jpg', Astro.site).href;
 ---
 
 <!doctype html>
@@ -19,19 +24,21 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/Images/SP - Logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/sp-logo.svg" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Meta Tags -->
     <title>{title} | Septimius Properties</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content={`${title} | Septimius Properties`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.jpg" /> {/* Replace with your actual OG image */}
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     
     <!-- View Transitions for smoother page navigation (Optional but nice) -->
     <ViewTransitions />

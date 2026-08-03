@@ -1,6 +1,9 @@
 ---
 // index.astro - Home page with Duplex-inspired design
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SmartImage from '../components/SmartImage.astro';
+
+const CARD_SIZES = '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
 
 const featuredProjects = [
   {
@@ -9,7 +12,7 @@ const featuredProjects = [
     category: 'Design, Fitout, Furniture',
     tags: ['interior', 'commercial'],
     description: 'A modern café design featuring contemporary furniture, custom fitout solutions, and innovative interior design.',
-    image: '/Images/Universal Cafe/cafe-01.jpg',
+    image: 'universal-cafe/cafe-01.jpg',
     slug: '/projects/universal-cafe'
   },
   {
@@ -18,7 +21,7 @@ const featuredProjects = [
     category: 'Design, Renovate, Furniture, Rental',
     tags: ['interior', 'renovation', 'architecture'],
     description: 'Complete renovation and design transformation of a lakeside property into a premium rental destination.',
-    image: '/Images/Lakehouse Property/lakehouse-aerial.jpg',
+    image: 'lakehouse-property/lakehouse-aerial.jpg',
     slug: '/projects/sheelin-lakehouse'
   },
   {
@@ -27,7 +30,7 @@ const featuredProjects = [
     category: 'Architectural Design',
     tags: ['architecture'],
     description: 'Contemporary architectural design for a luxury holiday home in the scenic Wicklow mountains.',
-    image: '/Images/Wicklow House/wicklow-01.png',
+    image: 'wicklow-house/wicklow-01.jpg',
     slug: '/projects/wicklow-holiday-home'
   }
 ];
@@ -39,9 +42,11 @@ const featuredProjects = [
   <section class="relative overflow-hidden py-20 md:py-32 min-h-[600px] flex items-center">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0">
-      <img 
-        src="Images/Lakehouse Property/lakehouse-30.jpg" 
-        alt="Hero background" 
+      <SmartImage
+        src="lakehouse-property/lakehouse-30.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover"
       />
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -130,9 +135,10 @@ const featuredProjects = [
     <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
       <!-- Left Side - Image -->
       <div class="bg-gray-100 relative overflow-hidden">
-        <img 
-          src="/Images/Universal Cafe/cafe-05.jpg" 
-          alt="Modern interior design" 
+        <SmartImage
+          src="universal-cafe/cafe-05.jpg"
+          alt="Modern interior design"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
         />
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900/20 to-transparent"></div>
@@ -207,9 +213,10 @@ const featuredProjects = [
         {featuredProjects.map((project) => (
           <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
             <div class="relative overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <SmartImage
+                src={project.image}
+                alt={project.title}
+                sizes={CARD_SIZES}
                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>

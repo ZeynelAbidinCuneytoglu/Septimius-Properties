@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../components/SmartImage.astro';
 ---
 
 <BaseLayout title="Premium Furniture | Septimius Properties" description="Bespoke furniture sourcing and interior styling services">
@@ -14,9 +15,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-gray-900">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90"></div>
-      <img 
-        src="/Images/Furniture/premium_furnitures.jpg" 
-        alt="Premium Furniture" 
+      <SmartImage
+        src="furniture/premium-furnitures.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-60 scale-110 animate-subtle-zoom"
       />
     </div>
@@ -57,9 +60,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <!-- Left Image -->
           <div class="w-full lg:w-1/2">
             <div class="relative">
-              <img 
-                src="/Images/Furniture/Living_room.jpg" 
-                alt="Premium furniture showcase" 
+              <SmartImage
+                src="furniture/living-room.jpg"
+                alt="Premium furniture showcase"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 class="w-full h-[300px] md:h-[600px] object-cover rounded-lg shadow-xl"
               />
               <!-- Decorative Elements -->
@@ -412,9 +416,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
           <div class="relative overflow-hidden">
-            <img 
-              src="/Images/Universal Cafe/cafe-01.jpg" 
-              alt="Universal Café" 
+            <SmartImage
+              src="universal-cafe/cafe-01.jpg"
+              alt="Universal Café"
+              sizes="(min-width: 768px) 50vw, 100vw"
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
           </div>
@@ -428,9 +433,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
           <div class="relative overflow-hidden">
-            <img 
-              src="/Images/Lakehouse Property/lakehouse-interior-01.avif" 
-              alt="Sheelin Lakehouse" 
+            <SmartImage
+              src="lakehouse-property/lakehouse-interior-01.avif"
+              alt="Sheelin Lakehouse"
+              sizes="(min-width: 768px) 50vw, 100vw"
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
           </div>

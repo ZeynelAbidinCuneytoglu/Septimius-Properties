@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SmartImage from '../components/SmartImage.astro';
 const FORM_ACTION = 'https://formspree.io/f/mkglwlla';
 
 const contactDetails = [
@@ -33,9 +34,11 @@ const socialLinks = [
   <!-- Hero Section -->
   <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center">
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src="/Images/Wicklow House/wicklow-02.png" 
-        alt="Contact Septimius Properties" 
+      <SmartImage
+        src="wicklow-house/wicklow-02.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-60"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>

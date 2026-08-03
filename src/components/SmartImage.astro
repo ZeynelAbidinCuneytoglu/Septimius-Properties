@@ -1,0 +1,72 @@
+---
+// Wraps astro:assets <Picture> so pages can keep referring to photos by path
+// while the build emits responsive AVIF/WebP/JPEG sets with width and height
+// baked in.
+//
+//   <SmartImage src="universal-cafe/cafe-01.jpg" alt="..." class="w-full h-64 object-cover" />
+//   <SmartImage src="..." alt="..." priority sizes="100vw" />   <-- above the fold
+//
+import { Picture } from 'astro:assets';
+
+const modules = import.meta.glob<ImageMetadata>(
+  '../assets/images/**/*.{jpg,jpeg,png,avif,webp}',
+  { eager: true, import: 'default' }
+);
+
+// Keyed by path relative to src/assets/images/ so callers never write "../".
+const bySrc = new Map(
+  Object.entries(modules).map(([key, mod]) => [key.replace('../assets/images/', ''), mod])
+);
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  /** Skip lazy-loading and hint the fetch as high priority. Use for the LCP image only. */
+  priority?: boolean;
+  sizes?: string;
+  widths?: number[];
+  loading?: 'lazy' | 'eager';
+}
+
+const {
+  src,
+  alt,
+  class: className,
+  priority = false,
+  sizes = '(min-width: 1024px) 50vw, 100vw',
+  widths,
+  loading,
+} = Astro.props;
+
+const image = bySrc.get(src);
+if (!image) {
+  throw new Error(
+    `SmartImage: "${src}" not found in src/assets/images/. ` +
+    `Available: ${[...bySrc.keys()].sort().join(', ')}`
+  );
+}
+
+// Full-bleed art needs the widest variant; everything else tops out around
+// 1600px (a 33vw card on a 2560px display at 2x lands near 1700px), which
+// keeps the build from emitting derivatives no layout can ever request.
+const ladder = widths ?? (priority ? [480, 768, 1024, 1600, 2560] : [400, 640, 960, 1600]);
+
+// Never upscale past what the source actually contains.
+const cap = Math.min(image.width, ladder.at(-1)!);
+const candidates = [...new Set([...ladder.filter(w => w < cap), cap])];
+---
+
+<Picture
+  src={image}
+  alt={alt}
+  widths={candidates}
+  sizes={sizes}
+  formats={['avif', 'webp']}
+  fallbackFormat="jpg"
+  loading={loading ?? (priority ? 'eager' : 'lazy')}
+  decoding={priority ? 'sync' : 'async'}
+  fetchpriority={priority ? 'high' : 'auto'}
+  class={className}
+  pictureAttributes={{ class: 'contents' }}
+/>

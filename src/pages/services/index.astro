@@ -1,6 +1,9 @@
 ---
 // services/index.astro - Services page with alternating image/text layout
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../components/SmartImage.astro';
+
+const HALF_WIDTH = '(min-width: 768px) 50vw, 100vw';
 ---
 
 <BaseLayout title="Our Services" description="Discover Septimius Properties' comprehensive range of services including interior design, architecture, holiday rentals, and premium furniture.">
@@ -9,9 +12,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="relative h-96 md:h-[500px] flex items-center justify-center">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src="/Images/Universal Cafe/cafe-01.jpg" 
-        alt="Services background" 
+      <SmartImage
+        src="universal-cafe/cafe-01.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-60"
       />
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -50,9 +55,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
         <div class="order-1 md:order-2">
-          <img 
-            src="Images/Architect office images/Architecture-1.jpeg" 
-            alt="Architecture and Interior Design" 
+          <SmartImage
+            src="architect-office-images/office-04.jpg"
+            alt="Architecture and Interior Design"
+            sizes={HALF_WIDTH}
             class="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
@@ -61,9 +67,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <!-- Service 2: Holiday Rentals (Image Left, Text Right) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-32">
         <div class="order-1 md:order-1">
-          <img 
-            src="/Images/Lakehouse Property/lakehouse-01.jpg" 
-            alt="Holiday Rentals" 
+          <SmartImage
+            src="lakehouse-property/lakehouse-01.jpg"
+            alt="Holiday Rentals"
+            sizes={HALF_WIDTH}
             class="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
@@ -102,9 +109,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
         <div class="order-1 md:order-2">
-          <img 
-            src="/Images/Universal Cafe/cafe-04.jpg" 
-            alt="Premium Furniture" 
+          <SmartImage
+            src="universal-cafe/cafe-04.jpg"
+            alt="Premium Furniture"
+            sizes={HALF_WIDTH}
             class="w-full h-auto rounded-lg shadow-lg"
           />
         </div>

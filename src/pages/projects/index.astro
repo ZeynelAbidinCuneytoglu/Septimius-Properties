@@ -1,6 +1,9 @@
 ---
 // projects/index.astro - Projects listing page
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../components/SmartImage.astro';
+
+const CARD_SIZES = '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
 
 const projects = [
   {
@@ -9,7 +12,7 @@ const projects = [
     category: 'Design, Fitout, Furniture',
     tags: ['interior', 'commercial'],
     description: 'A modern café design featuring contemporary furniture, custom fitout solutions, and innovative interior design.',
-    image: '/Images/Universal Cafe/cafe-01.jpg',
+    image: 'universal-cafe/cafe-01.jpg',
     slug: '/projects/universal-cafe'
   },
   {
@@ -18,7 +21,7 @@ const projects = [
     category: 'Design, Renovate, Furniture, Rental',
     tags: ['interior', 'renovation', 'architecture'],
     description: 'Complete renovation and design transformation of a lakeside property into a premium rental destination.',
-    image: '/Images/Lakehouse Property/lakehouse-aerial.jpg',
+    image: 'lakehouse-property/lakehouse-aerial.jpg',
     slug: '/projects/sheelin-lakehouse'
   },
   {
@@ -27,7 +30,7 @@ const projects = [
     category: 'Architectural Design',
     tags: ['architecture'],
     description: 'Contemporary architectural design for a luxury holiday home in the scenic Wicklow mountains.',
-    image: '/Images/Wicklow House/wicklow-01.png',
+    image: 'wicklow-house/wicklow-01.jpg',
     slug: '/projects/wicklow-holiday-home'
   }
 ];
@@ -39,9 +42,11 @@ const projects = [
   <section class="relative h-96 md:h-[500px] flex items-center justify-center">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src="/Images/Lakehouse Property/lakehouse-ext-01.jpg" 
-        alt="Projects background" 
+      <SmartImage
+        src="lakehouse-property/lakehouse-ext-01.jpg"
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-60"
       />
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -113,9 +118,10 @@ const projects = [
             data-tags={project.tags.join(',')}
           >
             <div class="relative overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <SmartImage
+                src={project.image}
+                alt={project.title}
+                sizes={CARD_SIZES}
                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>

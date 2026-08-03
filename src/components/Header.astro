@@ -40,9 +40,12 @@
     <div class="flex items-center justify-between py-4">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-        <img 
-          src="/Images/SP - Logo.svg" 
-          alt="Septimius Properties Logo" 
+        <img
+          src="/sp-logo.svg"
+          alt="Septimius Properties Logo"
+          width="500"
+          height="200"
+          fetchpriority="high"
           class="h-16 md:h-20 w-auto"
         />
       </a>
@@ -91,54 +94,50 @@
 </header>
 
 <script is:inline>
-  // Initialize menu functionality
-  function initMenu() {
+  // Every view transition re-runs this script. Listeners from the previous
+  // page are dropped through an AbortController first, otherwise the scroll
+  // and document-click handlers stack up one set per navigation.
+  (() => {
+    if (window.__spHeaderAbort) window.__spHeaderAbort.abort();
+    const controller = new AbortController();
+    window.__spHeaderAbort = controller;
+    const { signal } = controller;
+
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    if (!menuButton || !mobileMenu) return;
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      }, { signal });
 
-    // Remove existing listeners to prevent duplicates
-    const newMenuButton = menuButton.cloneNode(true);
-    menuButton.parentNode?.replaceChild(newMenuButton, menuButton);
+      document.addEventListener('click', (e) => {
+        if (!menuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      }, { signal });
+    }
 
-    // Mobile menu toggle
-    newMenuButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!newMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-  }
-
-  // Initialize scroll functionality
-  function initScroll() {
     const topBar = document.getElementById('top-bar');
-    if (!topBar) return;
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll > 50) {
-        topBar.classList.add('hidden');
-      } else {
-        topBar.classList.remove('hidden');
-      }
-    });
-  }
-
-  // Run on initial page load
-  initMenu();
-  initScroll();
-
-  // Run after view transitions
-  document.addEventListener('astro:page-load', () => {
-    initMenu();
-    initScroll();
-  });
+    if (topBar) {
+      // Coalesce to one class write per frame so scrolling does not force
+      // a style recalc on every wheel event.
+      let ticking = false;
+      let hidden = false;
+      const sync = () => {
+        ticking = false;
+        const shouldHide = window.scrollY > 50;
+        if (shouldHide === hidden) return;
+        hidden = shouldHide;
+        topBar.classList.toggle('hidden', shouldHide);
+      };
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(sync);
+      }, { passive: true, signal });
+      sync();
+    }
+  })();
 </script>

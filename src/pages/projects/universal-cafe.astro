@@ -1,14 +1,17 @@
 ---
 // projects/universal-cafe.astro - Universal Café project detail page
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../components/SmartImage.astro';
+
+const GALLERY_SIZES = '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
 
 const projectImages = [
-  '/Images/Universal Cafe/cafe-01.jpg',
-  '/Images/Universal Cafe/cafe-02.jpg',
-  '/Images/Universal Cafe/cafe-03.jpg',
-  '/Images/Universal Cafe/cafe-04.jpg',
-  '/Images/Universal Cafe/cafe-05.jpg',
-  '/Images/Universal Cafe/cafe-06.jpg'
+  'universal-cafe/cafe-01.jpg',
+  'universal-cafe/cafe-02.jpg',
+  'universal-cafe/cafe-03.jpg',
+  'universal-cafe/cafe-04.jpg',
+  'universal-cafe/cafe-05.jpg',
+  'universal-cafe/cafe-06.jpg'
 ];
 ---
 
@@ -17,9 +20,11 @@ const projectImages = [
   <!-- Full-Width Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src={projectImages[0]} 
-        alt="Universal Café – Dublin" 
+      <SmartImage
+        src={projectImages[0]}
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-80"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -62,9 +67,10 @@ const projectImages = [
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {projectImages.slice(1).map((image, index) => (
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
-                <img 
-                  src={image} 
-                  alt={`Universal Café - Image ${index + 2}`} 
+                <SmartImage
+                  src={image}
+                  alt={`Universal Café - Image ${index + 2}`}
+                  sizes={GALLERY_SIZES}
                   class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -123,9 +129,10 @@ const projectImages = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <a href="/projects/sheelin-lakehouse" class="group">
           <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-            <img 
-              src="/Images/Lakehouse Property/lakehouse-aerial.jpg" 
-              alt="Sheelin Lakehouse" 
+            <SmartImage
+              src="lakehouse-property/lakehouse-aerial.jpg"
+              alt="Sheelin Lakehouse"
+              sizes={GALLERY_SIZES}
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="p-6">
@@ -137,9 +144,10 @@ const projectImages = [
         
         <a href="/projects/wicklow-holiday-home" class="group">
           <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-            <img 
-              src="/Images/Wicklow House/wicklow-01.png" 
-              alt="Wicklow Holiday Home" 
+            <SmartImage
+              src="wicklow-house/wicklow-01.jpg"
+              alt="Wicklow Holiday Home"
+              sizes={GALLERY_SIZES}
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="p-6">

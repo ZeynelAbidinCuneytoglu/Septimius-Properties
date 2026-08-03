@@ -1,12 +1,15 @@
 ---
 // projects/wicklow-holiday-home.astro - Wicklow Holiday Home project detail page
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SmartImage from '../../components/SmartImage.astro';
+
+const GALLERY_SIZES = '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
 
 const projectImages = [
-  '/Images/Wicklow House/wicklow-01.png',
-  '/Images/Wicklow House/wicklow-02.png',
-  '/Images/Wicklow House/wicklow-03.png',
-  '/Images/Architect office images/office-07.jpg'
+  'wicklow-house/wicklow-01.jpg',
+  'wicklow-house/wicklow-02.jpg',
+  'wicklow-house/wicklow-03.jpg',
+  'architect-office-images/office-07.jpg'
 ];
 ---
 
@@ -15,9 +18,11 @@ const projectImages = [
   <!-- Hero Section with Project Image -->
   <section class="relative h-screen flex items-center justify-center">
     <div class="absolute inset-0 bg-gray-900">
-      <img 
-        src={projectImages[0]} 
-        alt="Wicklow Holiday Home" 
+      <SmartImage
+        src={projectImages[0]}
+        alt=""
+        sizes="100vw"
+        priority
         class="w-full h-full object-cover opacity-80"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -60,9 +65,10 @@ const projectImages = [
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {projectImages.slice(1).map((image, index) => (
               <div class="relative overflow-hidden rounded-lg shadow-lg group">
-                <img 
-                  src={image} 
-                  alt={`Wicklow Holiday Home - Image ${index + 2}`} 
+                <SmartImage
+                  src={image}
+                  alt={`Wicklow Holiday Home - Image ${index + 2}`}
+                  sizes={GALLERY_SIZES}
                   class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -121,9 +127,10 @@ const projectImages = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <a href="/projects/universal-cafe" class="group">
           <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-            <img 
-              src="/Images/Universal Cafe/cafe-01.jpg" 
-              alt="Universal Café" 
+            <SmartImage
+              src="universal-cafe/cafe-01.jpg"
+              alt="Universal Café"
+              sizes={GALLERY_SIZES}
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="p-6">
@@ -135,9 +142,10 @@ const projectImages = [
         
         <a href="/projects/sheelin-lakehouse" class="group">
           <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-            <img 
-              src="/Images/Lakehouse Property/lakehouse-aerial.jpg" 
-              alt="Sheelin Lakehouse" 
+            <SmartImage
+              src="lakehouse-property/lakehouse-aerial.jpg"
+              alt="Sheelin Lakehouse"
+              sizes={GALLERY_SIZES}
               class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div class="p-6">
